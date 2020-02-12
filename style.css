@@ -117,12 +117,16 @@ h3 {
 }
 
 .footer{
+    background-color: #f4f4f4;
+}
+.blocos {
     display: flex;
     align-items: flex-end;
 }
+
 .bloco {
     background-color: #0088ed;
-    height: 20vh;
+    height: 30vh;
     width: 20vw;
     margin: 1%;
     color: #fff;

@@ -48,7 +48,12 @@
             </div>
         </div>
 
-        <div class='footer'>
+    </div>
+    <div class='footer'>
+        <div class='container'>
+        <h2>growth plans</h2>
+        <p>take your business to the next level</p>
+        <div class='blocos'>
             <div class='bloco'>
                 <div class='header-bloco'>
                     <div>$ <span class='total'> 100 </span></div>
@@ -57,29 +62,30 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
-
     </div>
+</div>
 
-<script >
-    document.body.onload = adcElemento;
 
-function adcElemento () { 
-    for(var i = 0 ; i < 5 ; i++){
+    <script>
+        document.body.onload = adcElemento;
 
-    ultimoBloco = document.querySelector('.footer').lastElementChild; 
-    clone   = ultimoBloco.cloneNode(true);
-    total = parseFloat(clone.querySelector('.total').innerHTML);
+        function adcElemento() {
+            for (var i = 0; i < 5; i++) {
 
-    Array.from(clone.getElementsByClassName("total")).forEach(function(item) {     
-        item.innerHTML = total + 50 ;
-    });
+                ultimoBloco = document.querySelector('.blocos').lastElementChild;
+                clone = ultimoBloco.cloneNode(true);
+                total = parseFloat(clone.querySelector('.total').innerHTML);
 
-    clone.style.height = ultimoBloco.offsetHeight + 50 + 'px';
-    
-    document.querySelector('.footer').appendChild(clone); //você pode dar append onde quiser, utilizei o body.
-    }
-}
-</script>
+                Array.from(clone.getElementsByClassName("total")).forEach(function (item) {
+                    item.innerHTML = total + 50;
+                });
+
+                clone.style.height = ultimoBloco.offsetHeight + 50 + 'px';
+
+                document.querySelector('.blocos').appendChild(clone); //você pode dar append onde quiser, utilizei o body.
+            }
+        }
+    </script>
 
 
 </body>
