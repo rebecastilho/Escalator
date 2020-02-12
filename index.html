@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Teste layout</title>
+</head>
+
+<body>
+    <div class='header align-center'>
+        <img src="images/logo.png">
+        <p>We have ideias to growth your bussines</p>
+        <button>SEE NOW</button>
+    </div>
+
+    <div class='container'>
+        <h2>categories</h2>
+        <p>discover new possibilities to help you today</p>
+
+        <div class='content'>
+            <div class='card card-small img1'>
+                <h3>nature</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+
+            <div class='card card-medium img2'>
+                <h3>daily</h3>
+                <p>Praesent tincidunt consectetur diam</p>
+            </div>
+
+            <div class='card card-large justify-center img3'>
+                <h3>together</h3>
+                <p>Vivamus non arcu tincidunt, tempus nunc eu, scelerisque ipsum</p>
+            </div>
+
+            <div class='card card-medium img4'>
+                <h3>analysis</h3>
+                <p>Duis sollicitudin mauris vitae venenatis aliquet</p>
+            </div>
+
+            <div class='card card-small img5'>
+                <h3>pictures</h3>
+                <p>Quisque eu nisl purus</p>
+
+            </div>
+        </div>
+
+        <div class='footer'>
+            <div class='bloco'>
+                <div class='header-bloco'>
+                    <div>$ <span class='total'> 100 </span></div>
+                    <div class='descricao'> <span class='total'> 100 </span>+hours </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+
+    </div>
+
+<script >
+    document.body.onload = adcElemento;
+
+function adcElemento () { 
+    for(var i = 0 ; i < 5 ; i++){
+
+    ultimoBloco = document.querySelector('.footer').lastElementChild; 
+    clone   = ultimoBloco.cloneNode(true);
+    total = parseFloat(clone.querySelector('.total').innerHTML);
+
+    Array.from(clone.getElementsByClassName("total")).forEach(function(item) {     
+        item.innerHTML = total + 50 ;
+    });
+
+    clone.style.height = ultimoBloco.offsetHeight + 50 + 'px';
+    
+    document.querySelector('.footer').appendChild(clone); //você pode dar append onde quiser, utilizei o body.
+    }
+}
+</script>
+
+
+</body>
+
+</html>
